@@ -59,7 +59,6 @@
                               type="radio"
                               class="Polaris-RadioButton__Input"
                               aria-describedby="AutomaticDiscountsHelpText"
-                              checked=""
                               value=""
                             />
                             <span class="Polaris-RadioButton__Backdrop"> </span>
@@ -104,6 +103,7 @@
                               type="radio"
                               class="Polaris-RadioButton__Input"
                               aria-describedby="VariantsHelpText"
+                              checked=""
                               value=""
                             />
                             <span class="Polaris-RadioButton__Backdrop"> </span>
@@ -197,7 +197,7 @@
                   </div>
                 </div>
 
-                <!-- Date Range Dropdown -->
+                <!-- Product Selection Dropdown -->
                 <div style="margin-top: 16px">
                   <div class="Polaris-Select">
                     <select
@@ -211,7 +211,7 @@
                       <option value="lastWeek">Product Three</option>
                     </select>
                     <div class="Polaris-Select__Content" aria-hidden="true">
-                      <span class="Polaris-Select__SelectedOption" style="color: #c6bbbb"
+                      <span class="Polaris-Select__SelectedOption" style="color: #645959"
                         >Select a Product...</span
                       >
                       <span class="Polaris-Select__Icon">
@@ -258,25 +258,33 @@
       </div>
 
       <!-- Full Width Section for Method -->
-      <div class="Polaris-Layout" style="margin-top: 32px; margin-bottom: 32px">
+      <div
+        class="Polaris-Layout"
+        id="method_section"
+        style="margin-top: 32px; margin-bottom: 32px; display: none"
+      >
         <div class="Polaris-Layout__Section Polaris-Layout__Section--oneHalf">
           <div class="Polaris-LegacyCard Polaris-Card" style="padding: 16px">
             <p class="Polaris-Text--strong main-heading" style="margin-bottom: 15px">Method</p>
 
             <div class="Polaris-LegacyStack Polaris-LegacyStack--vertical">
+              <!-- Radio 1: Offers creator -->
               <div class="Polaris-LegacyStack__Item">
                 <div>
-                  <label class="Polaris-Choice Polaris-RadioButton__ChoiceLabel" for="disabled">
+                  <label
+                    class="Polaris-Choice Polaris-RadioButton__ChoiceLabel"
+                    for="offersCreator"
+                  >
                     <span class="Polaris-Choice__Control">
                       <span class="Polaris-RadioButton">
                         <input
-                          id="disabled"
-                          name="accounts"
+                          id="offersCreator"
+                          name="method"
                           type="radio"
                           class="Polaris-RadioButton__Input"
-                          aria-describedby="disabledHelpText"
-                          checked=""
-                          value=""
+                          aria-describedby="offersCreatorHelpText"
+                          checked
+                          value="creator"
                         />
                         <span class="Polaris-RadioButton__Backdrop"> </span>
                       </span>
@@ -288,43 +296,45 @@
                     </span>
                   </label>
                   <div class="Polaris-Choice__Descriptions">
-                    <div class="Polaris-Choice__HelpText" id="disabledHelpText">
-                      <span class="Polaris-Text--root Polaris-Text--subdued"
-                        >Set up new WideBundle offers on the product. Learn more about the.
-                        <a href="#">offers creator</a></span
-                      >
+                    <div class="Polaris-Choice__HelpText" id="offersCreatorHelpText">
+                      <span class="Polaris-Text--root Polaris-Text--subdued">
+                        Set up new WideBundle offers on the product.
+                        <a href="#">Learn more about the offers creator.</a>
+                      </span>
                     </div>
                   </div>
                 </div>
               </div>
+
+              <!-- Radio 2: Re-synchronize offers -->
               <div class="Polaris-LegacyStack__Item">
                 <div>
-                  <label class="Polaris-Choice Polaris-RadioButton__ChoiceLabel" for="optional">
+                  <label class="Polaris-Choice Polaris-RadioButton__ChoiceLabel" for="resyncOffers">
                     <span class="Polaris-Choice__Control">
                       <span class="Polaris-RadioButton">
                         <input
-                          id="optional"
-                          name="accounts"
+                          id="resyncOffers"
+                          name="method"
                           type="radio"
                           class="Polaris-RadioButton__Input"
-                          aria-describedby="optionalHelpText"
-                          value=""
+                          aria-describedby="resyncHelpText"
+                          value="resync"
                         />
                         <span class="Polaris-RadioButton__Backdrop"> </span>
                       </span>
                     </span>
                     <span class="Polaris-Choice__Label">
                       <span class="Polaris-Text--root Polaris-Text--bodyMd Polaris-Text--bold"
-                        >Re-synchronize offers
-                      </span>
+                        >Re-synchronize offers</span
+                      >
                     </span>
                   </label>
                   <div class="Polaris-Choice__Descriptions">
-                    <div class="Polaris-Choice__HelpText" id="optionalHelpText">
-                      <span class="Polaris-Text--root Polaris-Text--subdued"
-                        >Update WideBundle with the offers that already exist on this product. Learn
-                        more about the. <a href="#">re-synchronization</a></span
-                      >
+                    <div class="Polaris-Choice__HelpText" id="resyncHelpText">
+                      <span class="Polaris-Text--root Polaris-Text--subdued">
+                        Update WideBundle with existing offers on this product.
+                        <a href="#">Learn more about the re-synchronization.</a>
+                      </span>
                     </div>
                   </div>
                 </div>
@@ -333,18 +343,18 @@
 
             <div style="border-top: 1px solid #dfe3e8; margin: 15px 0"></div>
 
-            <div class="Polaris-LegacyStack__Item">
+            <!-- Conditional Checkbox -->
+            <div class="Polaris-LegacyStack__Item" id="conditionalCheckbox" style="display: block">
               <div>
-                <label class="Polaris-Choice" for="optionalb">
+                <label class="Polaris-Choice" for="copyCheckbox">
                   <span class="Polaris-Choice__Control">
                     <span class="Polaris-Checkbox">
                       <input
-                        id="optionalb"
-                        name="accounts"
+                        id="copyCheckbox"
+                        name="copyProduct"
                         type="checkbox"
                         class="Polaris-Checkbox__Input"
-                        aria-describedby="optionalHelpText"
-                        value=""
+                        aria-describedby="copyHelpText"
                       />
                       <span class="Polaris-Checkbox__Backdrop"></span>
                       <span class="Polaris-Checkbox__Icon">
@@ -370,10 +380,10 @@
                   </span>
                 </label>
                 <div class="Polaris-Choice__Descriptions">
-                  <div class="Polaris-Choice__HelpText" id="optionalHelpText">
+                  <div class="Polaris-Choice__HelpText" id="copyHelpText">
                     <span class="Polaris-Text--root Polaris-Text--subdued">
-                      The selected product will be duplicated so that you can first test your offer
-                      ideas without changing your current product.
+                      The selected product will be duplicated to test your offer ideas without
+                      affecting the original.
                     </span>
                   </div>
                 </div>
@@ -384,4 +394,47 @@
       </div>
     </div>
   </body>
+
+  <script>
+    const offersRadio = document.getElementById("offersCreator");
+    const resyncRadio = document.getElementById("resyncOffers");
+    const checkboxContainer = document.getElementById("conditionalCheckbox");
+
+    const AutomaticDiscountsRadio = document.getElementById("AutomaticDiscounts");
+    const VariantsRadio = document.getElementById("Variants");
+    const methodSectionContainer = document.getElementById("method_section");
+
+    function updateCheckboxVisibility() {
+      checkboxContainer.style.display = offersRadio.checked ? "block" : "none";
+    }
+
+    function updateMethodSectionVisibility() {
+      methodSectionContainer.style.display = VariantsRadio.checked ? "block" : "none";
+    }
+
+    // Initial check
+    updateCheckboxVisibility();
+    updateMethodSectionVisibility();
+
+    // Add event listeners
+    offersRadio.addEventListener("change", updateCheckboxVisibility);
+    resyncRadio.addEventListener("change", updateCheckboxVisibility);
+
+    AutomaticDiscountsRadio.addEventListener("change", updateMethodSectionVisibility);
+    VariantsRadio.addEventListener("change", updateMethodSectionVisibility);
+
+    // ---- show selected option
+    const selectInput = document.querySelector(".Polaris-Select__Input");
+    const selectedOptionSpan = document.querySelector(".Polaris-Select__SelectedOption");
+    function updateSelectedLabel() {
+      const selectedText = selectInput.options[selectInput.selectedIndex].text;
+      selectedOptionSpan.textContent = selectedText;
+    }
+
+    // Initialize label on load
+    updateSelectedLabel();
+
+    // Update on change
+    selectInput.addEventListener("change", updateSelectedLabel);
+  </script>
 </html>
