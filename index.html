@@ -234,12 +234,22 @@
                 </div>
 
                 <div style="margin-top: 16px; text-align: right">
-                  <button
+                  <a
+                    href="ChooseBundle.html"
                     class="Polaris-Button Polaris-Button--primary"
-                    style="background-color: #007bff; border-color: #007bff; color: white"
+                    style="
+                      background-color: #007bff;
+                      border-color: #007bff;
+                      color: white;
+                      transition: all 0.2s ease;
+                    "
+                    onmouseover="this.style.backgroundColor='#0069d9'; this.style.borderColor='#0062cc'"
+                    onmouseout="this.style.backgroundColor='#007bff'; this.style.borderColor='#007bff'"
+                    onmousedown="this.style.backgroundColor='#005cbf'; this.style.borderColor='#0056b3'"
+                    onmouseup="this.style.backgroundColor='#0069d9'; this.style.borderColor='#0062cc'"
                   >
                     Continue
-                  </button>
+                  </a>
                 </div>
               </div>
             </div>
