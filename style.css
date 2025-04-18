@@ -1,0 +1,38 @@
+.main-heading {
+  font-family: Inter;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 20px;
+  letter-spacing: 0px;
+  margin-bottom: 15px;
+}
+
+.sub-heading {
+  font-family: Inter;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 100%;
+  letter-spacing: 0px;
+
+}
+
+.Polaris-Layout {
+  display: flex;
+  flex-wrap: nowrap;
+  /* Important for equal height */
+  align-items: stretch;
+}
+
+.Polaris-Layout__Section {
+  flex: 1;
+  /* Equal width, and stretchable */
+  display: flex;
+  flex-direction: column;
+}
+
+.Polaris-LegacyCard {
+  flex: 1;
+  /* Make card take all available height */
+  display: flex;
+  flex-direction: column;
+}

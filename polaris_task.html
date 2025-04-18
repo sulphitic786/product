@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Polaris Bundle Page</title>
+    <link rel="stylesheet" href="https://unpkg.com/@shopify/polaris@11.0.0/build/esm/styles.css" />
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      body {
+        padding: 20px;
+        background-color: #f6f6f7;
+        font-family: -apple-system, BlinkMacSystemFont, San Francisco, Roboto, Segoe UI,
+          Helvetica Neue, sans-serif;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="Polaris-Page">
+      <!-- Hero Banner -->
+      <div
+        style="
+          background-color: #377dff;
+          padding: 40px;
+          border-radius: 16px;
+          margin-bottom: 32px;
+          text-align: center;
+          font-weight: 600;
+          font-size: 50px;
+          line-height: 48px;
+          letter-spacing: 0px;
+        "
+      >
+        <h1 class="Polaris-DisplayText Polaris-DisplayText--sizeLarge" style="color: white">
+          Choose Bundle Type
+        </h1>
+      </div>
+
+      <!-- Two Column Section -->
+      <div class="Polaris-Page__Content">
+        <div class="Polaris-Layout Polaris-Layout--fullHeight">
+          <!-- LEFT CARD -->
+          <div class="Polaris-Layout__Section Polaris-Layout__Section--oneHalf">
+            <div class="Polaris-LegacyCard Polaris-Card" style="padding: 16px">
+              <div class="Polaris-Card__Section">
+                <p class="Polaris-Text--strong main-heading">Bundle type</p>
+
+                <div class="Polaris-LegacyStack Polaris-LegacyStack--vertical">
+                  <div class="Polaris-LegacyStack__Item">
+                    <div>
+                      <label
+                        class="Polaris-Choice Polaris-RadioButton__ChoiceLabel"
+                        for="AutomaticDiscounts"
+                      >
+                        <span class="Polaris-Choice__Control">
+                          <span class="Polaris-RadioButton">
+                            <input
+                              id="AutomaticDiscounts"
+                              name="Variants"
+                              type="radio"
+                              class="Polaris-RadioButton__Input"
+                              aria-describedby="AutomaticDiscountsHelpText"
+                              checked=""
+                              value=""
+                            />
+                            <span class="Polaris-RadioButton__Backdrop"> </span>
+                          </span>
+                        </span>
+                        <span class="Polaris-Choice__Label">
+                          <span class="Polaris-RadioButton__Label Polaris-Text--bold">
+                            Bundles by Automatic Discounts
+                            <span
+                              style="
+                                background-color: #ff8743;
+                                color: white;
+                                font-size: 10px;
+                                padding: 2px 6px;
+                                border-radius: 4px;
+                                margin-left: 6px;
+                              "
+                              >Recommended</span
+                            >
+                          </span>
+                        </span>
+                      </label>
+                      <div class="Polaris-Choice__Descriptions">
+                        <div class="Polaris-Choice__HelpText" id="AutomaticDiscountsHelpText">
+                          <span
+                            class="Polaris-Text--root Polaris-Text--subdued Polaris-Text--bodySm"
+                            >Create bundles using automatic discounts on your store.
+                            <a href="#">Learn more about automatic discounts.</a>
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="Polaris-LegacyStack__Item">
+                    <div>
+                      <label class="Polaris-Choice Polaris-RadioButton__ChoiceLabel" for="Variants">
+                        <span class="Polaris-Choice__Control">
+                          <span class="Polaris-RadioButton">
+                            <input
+                              id="Variants"
+                              name="Variants"
+                              type="radio"
+                              class="Polaris-RadioButton__Input"
+                              aria-describedby="VariantsHelpText"
+                              value=""
+                            />
+                            <span class="Polaris-RadioButton__Backdrop"> </span>
+                          </span>
+                        </span>
+                        <span class="Polaris-Choice__Label">
+                          <span class="Polaris-Text--root Polaris-Text--bodyMd Polaris-Text--bold"
+                            >Bundles by Variants
+                          </span>
+                        </span>
+                      </label>
+                      <div class="Polaris-Choice__Descriptions">
+                        <div class="Polaris-Choice__HelpText" id="VariantsHelpText">
+                          <span
+                            class="Polaris-Text--root Polaris-Text--subdued Polaris-Text--bodySm"
+                            >The variants of your products will act as bundles.
+                            <a href="#">Learn more about the variant system.</a></span
+                          >
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- RIGHT CARD -->
+          <div class="Polaris-Layout__Section Polaris-Layout__Section--oneHalf">
+            <div class="Polaris-LegacyCard Polaris-Card" style="padding: 16px">
+              <div class="Polaris-Card__Section">
+                <p class="Polaris-Text--strong main-heading">Bundle Target</p>
+
+                <div class="Polaris-LegacyStack Polaris-LegacyStack--vertical">
+                  <div class="Polaris-LegacyStack__Item">
+                    <div>
+                      <label
+                        class="Polaris-Choice Polaris-RadioButton__ChoiceLabel"
+                        for="SpecificProduct"
+                      >
+                        <span class="Polaris-Choice__Control">
+                          <span class="Polaris-RadioButton">
+                            <input
+                              id="SpecificProduct"
+                              name="Product"
+                              type="radio"
+                              class="Polaris-RadioButton__Input"
+                              aria-describedby="AutomaticDiscountsHelpText"
+                              checked=""
+                              value=""
+                            />
+                            <span class="Polaris-RadioButton__Backdrop"> </span>
+                          </span>
+                        </span>
+                        <span class="Polaris-Choice__Label">
+                          <span
+                            class="Polaris-RadioButton__Label Polaris-Text--bodySm Polaris-Text--bold"
+                          >
+                            Specific Product
+                          </span>
+                        </span>
+                      </label>
+                    </div>
+                  </div>
+                  <div class="Polaris-LegacyStack__Item">
+                    <div>
+                      <label
+                        class="Polaris-Choice Polaris-RadioButton__ChoiceLabel"
+                        for="ProductsInCollection"
+                      >
+                        <span class="Polaris-Choice__Control">
+                          <span class="Polaris-RadioButton">
+                            <input
+                              id="ProductsInCollection"
+                              name="Product"
+                              type="radio"
+                              class="Polaris-RadioButton__Input"
+                              aria-describedby="VariantsHelpText"
+                              value=""
+                            />
+                            <span class="Polaris-RadioButton__Backdrop"> </span>
+                          </span>
+                        </span>
+                        <span class="Polaris-Choice__Label">
+                          <span class="Polaris-Text--root Polaris-Text--bodySm Polaris-Text--bold"
+                            >Products in Collection
+                          </span>
+                        </span>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Date Range Dropdown -->
+                <div style="margin-top: 16px">
+                  <div class="Polaris-Select">
+                    <select
+                      id=":Rq6:"
+                      class="Polaris-Select__Input"
+                      aria-invalid="false"
+                      style="border-color: #303030"
+                    >
+                      <option value="today" selected>Product One</option>
+                      <option value="yesterday">Product Two</option>
+                      <option value="lastWeek">Product Three</option>
+                    </select>
+                    <div class="Polaris-Select__Content" aria-hidden="true">
+                      <span class="Polaris-Select__SelectedOption" style="color: #c6bbbb"
+                        >Select a Product...</span
+                      >
+                      <span class="Polaris-Select__Icon">
+                        <span class="Polaris-Icon">
+                          <svg
+                            viewBox="0 0 20 20"
+                            class="Polaris-Icon__Svg"
+                            focusable="false"
+                            aria-hidden="true"
+                          >
+                            <path
+                              d="m13.53 13.03-2.646 2.647a1.25 1.25 0 0 1-1.768 0l-2.646-2.647a.75.75 0 0 1 1.06-1.06l2.47 2.47 2.47-2.47a.75.75 0 0 1 1.06 1.06Z"
+                            ></path>
+                          </svg>
+                        </span>
+                      </span>
+                    </div>
+                    <div class="Polaris-Select__Backdrop"></div>
+                  </div>
+                </div>
+
+                <div style="margin-top: 16px; text-align: right">
+                  <button
+                    class="Polaris-Button Polaris-Button--primary"
+                    style="background-color: #007bff; border-color: #007bff; color: white"
+                  >
+                    Continue
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Full Width Section for Method -->
+      <div class="Polaris-Layout" style="margin-top: 32px; margin-bottom: 32px">
+        <div class="Polaris-Layout__Section Polaris-Layout__Section--oneHalf">
+          <div class="Polaris-LegacyCard Polaris-Card" style="padding: 16px">
+            <p class="Polaris-Text--strong main-heading" style="margin-bottom: 15px">Method</p>
+
+            <div class="Polaris-LegacyStack Polaris-LegacyStack--vertical">
+              <div class="Polaris-LegacyStack__Item">
+                <div>
+                  <label class="Polaris-Choice Polaris-RadioButton__ChoiceLabel" for="disabled">
+                    <span class="Polaris-Choice__Control">
+                      <span class="Polaris-RadioButton">
+                        <input
+                          id="disabled"
+                          name="accounts"
+                          type="radio"
+                          class="Polaris-RadioButton__Input"
+                          aria-describedby="disabledHelpText"
+                          checked=""
+                          value=""
+                        />
+                        <span class="Polaris-RadioButton__Backdrop"> </span>
+                      </span>
+                    </span>
+                    <span class="Polaris-Choice__Label">
+                      <span class="Polaris-Text--root Polaris-Text--bodyMd Polaris-Text--bold"
+                        >Offers creator</span
+                      >
+                    </span>
+                  </label>
+                  <div class="Polaris-Choice__Descriptions">
+                    <div class="Polaris-Choice__HelpText" id="disabledHelpText">
+                      <span class="Polaris-Text--root Polaris-Text--subdued"
+                        >Set up new WideBundle offers on the product. Learn more about the.
+                        <a href="#">offers creator</a></span
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="Polaris-LegacyStack__Item">
+                <div>
+                  <label class="Polaris-Choice Polaris-RadioButton__ChoiceLabel" for="optional">
+                    <span class="Polaris-Choice__Control">
+                      <span class="Polaris-RadioButton">
+                        <input
+                          id="optional"
+                          name="accounts"
+                          type="radio"
+                          class="Polaris-RadioButton__Input"
+                          aria-describedby="optionalHelpText"
+                          value=""
+                        />
+                        <span class="Polaris-RadioButton__Backdrop"> </span>
+                      </span>
+                    </span>
+                    <span class="Polaris-Choice__Label">
+                      <span class="Polaris-Text--root Polaris-Text--bodyMd Polaris-Text--bold"
+                        >Re-synchronize offers
+                      </span>
+                    </span>
+                  </label>
+                  <div class="Polaris-Choice__Descriptions">
+                    <div class="Polaris-Choice__HelpText" id="optionalHelpText">
+                      <span class="Polaris-Text--root Polaris-Text--subdued"
+                        >Update WideBundle with the offers that already exist on this product. Learn
+                        more about the. <a href="#">re-synchronization</a></span
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div style="border-top: 1px solid #dfe3e8; margin: 15px 0"></div>
+
+            <div class="Polaris-LegacyStack__Item">
+              <div>
+                <label class="Polaris-Choice" for="optionalb">
+                  <span class="Polaris-Choice__Control">
+                    <span class="Polaris-Checkbox">
+                      <input
+                        id="optionalb"
+                        name="accounts"
+                        type="checkbox"
+                        class="Polaris-Checkbox__Input"
+                        aria-describedby="optionalHelpText"
+                        value=""
+                      />
+                      <span class="Polaris-Checkbox__Backdrop"></span>
+                      <span class="Polaris-Checkbox__Icon">
+                        <span class="Polaris-Icon">
+                          <svg
+                            viewBox="0 0 20 20"
+                            class="Polaris-Icon__Svg"
+                            focusable="false"
+                            aria-hidden="true"
+                          >
+                            <path
+                              d="M8.143 13.601 4.5 9.958l1.06-1.06 2.583 2.582 5.71-5.711 1.061 1.06-6.77 6.772Z"
+                            ></path>
+                          </svg>
+                        </span>
+                      </span>
+                    </span>
+                  </span>
+                  <span class="Polaris-Choice__Label">
+                    <span class="Polaris-Text--root Polaris-Text--bodyMd Polaris-Text--bold">
+                      Create offers on a copy of the selected product (optional)
+                    </span>
+                  </span>
+                </label>
+                <div class="Polaris-Choice__Descriptions">
+                  <div class="Polaris-Choice__HelpText" id="optionalHelpText">
+                    <span class="Polaris-Text--root Polaris-Text--subdued">
+                      The selected product will be duplicated so that you can first test your offer
+                      ideas without changing your current product.
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
