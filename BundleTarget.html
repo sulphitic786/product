@@ -700,6 +700,29 @@
     </div>
   </body>
 
+  <!-- Search is filter -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const searchInput = document.getElementById("TextField1");
+      const resourceItems = document.querySelectorAll(".Polaris-ResourceItem");
+
+      searchInput.addEventListener("keyup", function () {
+        const query = searchInput.value.toLowerCase();
+
+        resourceItems.forEach((item) => {
+          const titleElement = item.querySelector("h3");
+          const titleText = titleElement ? titleElement.textContent.toLowerCase() : "";
+
+          if (titleText.includes(query)) {
+            item.style.display = "block";
+          } else {
+            item.style.display = "none";
+          }
+        });
+      });
+    });
+  </script>
+
   <script>
     document.addEventListener("DOMContentLoaded", function () {
       const input = document.getElementById("productInput");
