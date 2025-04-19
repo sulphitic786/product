@@ -784,30 +784,41 @@
   </body>
 
   <script>
-    const productInput = document.getElementById("productInput");
-    const modal = document.getElementById("productModal");
-    const closeBtn = document.getElementById("closeModalBtn");
-    const productOptions = document.querySelectorAll(".productOption");
+    document.addEventListener("DOMContentLoaded", function () {
+      const input = document.getElementById("productInput");
+      const modal = document.getElementById("productModal");
+      const closeModalBtn = document.getElementById("closeModalBtn");
 
-    productInput.addEventListener("click", () => {
-      modal.style.display = "block";
-    });
+      // Open modal on input click
+      input.addEventListener("click", () => {
+        modal.style.display = "block";
+      });
 
-    closeBtn.addEventListener("click", () => {
-      modal.style.display = "none";
-    });
-
-    window.addEventListener("click", (e) => {
-      if (e.target === modal) {
+      // Close modal on close button click
+      closeModalBtn.addEventListener("click", () => {
         modal.style.display = "none";
-      }
-    });
+      });
 
-    productOptions.forEach((btn) => {
-      btn.addEventListener("click", () => {
-        const selected = btn.getAttribute("data-name");
-        productInput.value = selected;
-        modal.style.display = "none";
+      // Handle product selection
+      const checkboxes = modal.querySelectorAll(".Polaris-Checkbox__Input");
+      checkboxes.forEach((checkbox) => {
+        checkbox.addEventListener("change", () => {
+          // Get the product name next to the checkbox
+          const productName = checkbox
+            .closest(".Polaris-ResourceItem")
+            .querySelector("h3").innerText;
+
+          // Set input value to selected product (you can enhance for multiple if needed)
+          input.value = productName;
+
+          // Optional: close modal after selection
+          modal.style.display = "none";
+
+          // Uncheck all other checkboxes to allow only one selection
+          checkboxes.forEach((cb) => {
+            if (cb !== checkbox) cb.checked = false;
+          });
+        });
       });
     });
   </script>
